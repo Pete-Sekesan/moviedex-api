@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const MOVIES = require("./movies-small.json");
+const MOVIES = require("./moviedex.json");
 
 const app = express();
 
@@ -64,7 +64,7 @@ app.get("/movie", function handleGetMovie(req, res) {
   res.json(response);
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
